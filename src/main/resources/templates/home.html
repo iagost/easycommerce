@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EasyCommerce</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.3.2/css/bootstrap.min.css">
+    <script src="/webjars/bootstrap/5.3.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<h1 th:text="${message}"></h1>
+
+<div class="row mx-auto my-3" style="width: 1000px">
+    <div th:each="product: ${products}" class="col-4">
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 th:text="${product.description}" class="card-title"/>
+                <p th:text="${product.price}" class="card-text"/>
+                <a href="#" class="btn btn-primary">Adicionar ao carrinho</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
